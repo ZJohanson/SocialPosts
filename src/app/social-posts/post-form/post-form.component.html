@@ -1,0 +1,18 @@
+<mat-dialog-content class="mat-typography">
+  <form (submit)="submitPost(onAddPostForm)" #onAddPostForm="ngForm">
+    <label for="title">Title</label>
+    <mat-form-field>
+      <input matInput type="text" name="title" ngModel #titleInput="ngModel" required />
+      <mat-error *ngIf="titleInput.invalid">Please enter a post title.</mat-error>
+    </mat-form-field>
+    <label for="thought">Thought</label>
+    <mat-form-field>
+      <textarea matInput rows="8" name="thought" ngModel #thoughtInput="ngModel" required></textarea>
+      <mat-error *ngIf="thoughtInput.invalid">Please enter a post thought.</mat-error>
+    </mat-form-field>
+    <button mat-flat-button color="white" type="submit" [mat-dialog-close]="true" [disabled]="!onAddPostForm.valid"
+      class="post-form-button">Add
+      Post</button>
+    <button mat-flat-button color="white" type="button" class="post-form-button" mat-dialog-close>Cancel</button>
+  </form>
+</mat-dialog-content>

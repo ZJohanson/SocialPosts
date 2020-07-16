@@ -1,0 +1,17 @@
+<div fxLayoutAlign="space-between center">
+  <div fxLayout="row" fxLayoutAlign="start center" fxFlex="80" fxLayoutGap="5px" class="task-container">
+    <ul>
+      <li>
+        <h3>{{ post.title }}</h3>
+      </li>
+      <li>
+        <p>{{ post.thought }}</p>
+      </li>
+    </ul>
+  </div>
+  <div fxFlex="20">
+    <span class="material-icons cursor" (click)="deletePost(post)">
+      delete
+    </span>
+  </div>
+</div>
