@@ -3,7 +3,7 @@
 </div>
 
 <div class="new-thought" fxLayoutAlign="center start">
-  <button mat-flat-button mat-button (click)="onSubmit()">New Thought</button>
+  <button mat-flat-button mat-button (click)="onSubmit()">New Post</button>
 </div>
 
 <div fxLayout="column" class="scroller posts-list">
@@ -12,5 +12,5 @@
       <app-post [post]="post" (deleted)="onDelete($event)"></app-post>
     </li>
   </ul>
-  <span *ngIf="posts.length <= 0" fxLayoutAlign="center start">No Post Found!</span>
+  <span *ngIf="posts.length <= 0" fxLayoutAlign="center start">No Posts Found!</span>
 </div>

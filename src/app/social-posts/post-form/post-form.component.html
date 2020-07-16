@@ -5,10 +5,10 @@
       <input matInput type="text" name="title" ngModel #titleInput="ngModel" required />
       <mat-error *ngIf="titleInput.invalid">Please enter a post title.</mat-error>
     </mat-form-field>
-    <label for="thought">Thought</label>
+    <label for="thought">New Post</label>
     <mat-form-field>
       <textarea matInput rows="8" name="thought" ngModel #thoughtInput="ngModel" required></textarea>
-      <mat-error *ngIf="thoughtInput.invalid">Please enter a post thought.</mat-error>
+      <mat-error *ngIf="thoughtInput.invalid">Please enter your message.</mat-error>
     </mat-form-field>
     <button mat-flat-button color="white" type="submit" [mat-dialog-close]="true" [disabled]="!onAddPostForm.valid"
       class="post-form-button">Add
